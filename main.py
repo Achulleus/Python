@@ -70,8 +70,23 @@ while True:
         mycursor.execute(sql, val)
         mydb.comit
 
+    show = input("\nSoll die Statistik ausgegeben werden? (j/n): ")
+    if show == "j" or show == "n":
+        mycursor.execute("SELECT count(spieler), count(npc) FROM sspes")
+        myresult = mycursor.fetchall()
+
+        for x in myresult:
+            print(x)
+
+        mycursor.execute("SELECT count(spielergewonnen), count(npcgewonnen) FROM hs")
+        myresult = mycursor.fetchall()
+
+        for x in myresult:
+            print(x)
+
     again = input("\nNochmal (j/n): ")
     if again == "J" or again == "j":
         continue
     else:
+        mydb.close()
         break
