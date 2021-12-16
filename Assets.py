@@ -20,7 +20,6 @@ class Person:
         self.dep = dep
         self.sex = sex
 
-
 class Mitarbeiter(Person):
     def __init__(self, dep: Department = Department.BiomedicalEngineering, sex: Sex = Sex.FeMale):
         super().__init__(dep, sex)

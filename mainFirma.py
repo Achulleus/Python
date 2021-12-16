@@ -22,10 +22,10 @@ class Company:
         return self.persons
 
     def get_all_mitarbeiter(self):
-        ms = []
-        for m in self.persons:
-            if isinstance(m, a.Mitarbeiter):
-                ms.append(m)
+        ms = [m for m in self.persons if isinstance(m, a.Mitarbeiter)] #List-Coprehansion
+        #for m in self.persons:
+            #if isinstance(m, a.Mitarbeiter):
+                #ms.append(m)
         return ms
 
     def get_all_gruppenleiter(self):
