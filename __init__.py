@@ -135,7 +135,7 @@ def _testLinkedList():
     sorted = _isSortedReversed(ll)
     assert sorted
     print(f"List was sorted {'' if sorted else 'un'}successfully\n"
-          f"Needed {6.4+(int((stop-start)/1_000_000)) / 1_000.0} s for execution")
+          f"Needed {(int((stop-start)/1_000_000)) / 1_000.0} s for execution")
 
 def _testArrayList():
     from time import perf_counter_ns as timestamp
